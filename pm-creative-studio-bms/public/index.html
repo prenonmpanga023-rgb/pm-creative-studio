@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14213d">
+  <meta name="description" content="PM Creative Studio business management: inventory, sales, expenses and reports.">
+  <title>PM Creative Studio | Business Suite</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <main id="auth" class="auth">
+    <section class="auth-aside">
+      <div class="logo">PM</div>
+      <h1>PM Creative Studio</h1>
+      <p>Stock, sales, expenses and staff in one place. Works on your phone, tablet or desktop.</p>
+    </section>
+    <section class="auth-main">
+      <div class="auth-card">
+        <div class="seg" role="tablist">
+          <button id="tabLogin" class="on" type="button">Sign in</button>
+          <button id="tabCreate" type="button">New workspace</button>
+          <button id="tabJoin" type="button">Join team</button>
+        </div>
+        <p id="authMsg" class="msg hidden" role="alert"></p>
+        <form id="formLogin" class="stack">
+          <label>Email<input name="email" type="email" autocomplete="username" required></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+          <button class="btn">Sign in</button>
+        </form>
+        <form id="formCreate" class="stack hidden">
+          <label>Business name<input name="company" required minlength="2" maxlength="140"></label>
+          <label>Your full name<input name="name" required minlength="2" maxlength="120"></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <label>Password <small>10+ characters</small><input name="password" type="password" autocomplete="new-password" required minlength="10"></label>
+          <button class="btn">Create workspace</button>
+        </form>
+        <form id="formJoin" class="stack hidden">
+          <p class="hint">Your owner must invite your email first. Then create your login here.</p>
+          <label>Your full name<input name="name" required minlength="2" maxlength="120"></label>
+          <label>Email used in the invitation<input name="email" type="email" autocomplete="email" required></label>
+          <label>Password <small>10+ characters</small><input name="password" type="password" autocomplete="new-password" required minlength="10"></label>
+          <button class="btn">Join workspace</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="shell" class="shell hidden">
+    <aside id="side" class="side">
+      <div class="brand"><div class="logo">PM</div><div><b>PM Creative Studio</b><small id="coName"></small></div></div>
+      <nav id="nav" aria-label="Main"></nav>
+      <button id="logout" class="btn ghost">Sign out</button>
+    </aside>
+    <div id="scrim" class="scrim"></div>
+    <div class="body">
+      <header class="top">
+        <button id="menuBtn" class="icon-btn" aria-label="Open menu">☰</button>
+        <h2 id="title">Overview</h2>
+        <span id="who" class="who"></span>
+      </header>
+      <p id="flash" class="msg hidden" role="status"></p>
+      <section id="view" class="view"></section>
+    </div>
+  </div>
+  <div id="modal"></div>
+</body>
+</html>

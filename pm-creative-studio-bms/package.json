@@ -1,0 +1,10 @@
+{
+  "name": "pm-creative-studio-bms",
+  "version": "2.0.0",
+  "private": true,
+  "description": "PM Creative Studio business management system on Supabase",
+  "scripts": {
+    "start": "npx serve public -l 3000",
+    "check": "node --check public/js/config.js && node --check public/js/api.js && node --check public/js/app.js"
+  }
+}
